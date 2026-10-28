@@ -1,0 +1,37 @@
+//Função responsável para mostrar os alunos
+function listarProfessor(req, res){
+    
+    //criar uma lista simples de alunos
+    const professor = [
+        {
+            id: 1,
+            nome: "Luis"
+        },
+        {
+            id: 2,
+            nome: "Jansen"
+        },
+        {
+            id: 3,
+            nome: "Reenye"
+        },
+        {
+            id: 4,
+            nome: "Robson"
+        },
+        {
+            id: 5,
+            nome: "Wellington"
+        },
+        
+        
+    ];
+
+    //Envia a lista de alunos como uma resposta JSON
+    res.json(professor);
+}
+
+//Exportando a função para que ela possa ser utilizada em outros arquivos
+module.exports = {
+    listarProfessor
+};

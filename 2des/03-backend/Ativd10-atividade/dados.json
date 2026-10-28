@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "nome":"Banana",
+        "unidade":"kg",
+        "precoUnitario":5.00,
+        "quantidade": 10
+    },
+    {
+       "id":2,
+        "nome":"Repolho",
+        "unidade":"unidade",
+        "precoUnitario":4.90,
+        "quantidade": 5
+    },
+    { "id":3,
+        "nome":"Mamao",
+        "unidade":"kg",
+        "precoUnitario":12.5,
+        "quantidade": 9
+    }
+]

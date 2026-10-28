@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Notas</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+    <main class = "container">
+        <h1>Sistema de Notas</h1>
+
+        <div class="formulario">
+            
+        
+            <label for="nome">Alunos</label>
+            <input type="text" id="nome" placeholder="Nome Do Aluno">
+        
+        
+            <label for="nota1">Nota 1</label>
+            <input type="number" id="nota1" placeholder="Nota N°1">
+        
+
+            <label for="nota2">Nota 2</label>
+            <input type="number" id="nota2" placeholder="Nota N°2">
+
+            <label for="nota3">Nota 3</label>
+            <input type="number" id="nota3" placeholder="Nota N°3">
+
+            <div class="botao">
+                <button id="btnCalcular">Calcular Media</button>
+                <button id="btnLimpar">Limpar Campos</button>
+            </div>
+        </div>
+    
+        <section id="resultado" class="resultado">
+            <h2>REsultados</h2>
+
+            <p id="nomeResultado"></p>
+            <p id="mediaResultado"></p>
+            <p id="situacaoResultado"></p>
+        </section>
+
+      
+    </main>
+    <script src ="script.js"></script>
+</body>
+</html>

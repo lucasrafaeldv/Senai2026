@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Sistema de Produtos  </title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <main class="login-container">
+        <div class="logo">📦</div>
+
+        <h1>Bem-vindo!</h1>
+        <p class="subtitulo">Entre para Acessar o Sistema</p>
+
+        <form id="formLogin">
+            <div class="campo">
+                <label for="usuario">Usuario: </label>
+                <input type="text" id="usuario" placeholder="Digite seu usuario" required>
+            </div>
+            <div class="campo">
+                <label for="senha">Senha: </label>
+                <input type="password" id="senha" placeholder="Digite sua Senha" required>
+            </div>
+                <p id="mensagemErro" class="mensagem-erro"></p>
+                <button type="submit" class="botao-principal">Entrar no sistema</button>
+
+            <p class="rodape">Sistema de Cadastro de Produtos</p>
+        </form>
+    </main>
+   <script src="login.js"></script> 
+</body>
+</html>
