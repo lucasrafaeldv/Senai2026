@@ -1,0 +1,42 @@
+<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Consulta de IMC</title> </head> <body>
+<h1>Nova Consulta</h1>
+
+<form action="http://127.0.0.1:3000/" method="POST">
+
+    <label for="id">ID:</label>
+    <input type="number" id="id" name="id" required>
+
+    <br><br>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <br><br>
+
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" required>
+
+    <br><br>
+
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" name="peso" step="0.1" required>
+
+    <br><br>
+
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="altura" name="altura" step="0.01" required>
+
+    <br><br>
+
+    <button type="submit">Enviar Consulta</button>
+
+</form>
+
+
+<br>
+
+<a href="http://127.0.0.1:3000/">
+    Ver consultas
+</a>
+
+</body> </html>

@@ -1,0 +1,29 @@
+[
+    {
+        "id":1,
+        "nome":"Camila",
+        "idade":"67",
+        "peso":"80kg",
+        "data":"21-08-2022",
+        "altura":1.56
+        
+    },
+    {
+        "id":2,
+        "nome":"Sivirino",
+
+        "peso":"180kg",
+        "data":"23-08-2022",
+        "altura":1.88
+        
+    },
+    {
+        "id":3,
+        "nome":"Moacir",
+        
+        "peso":"300kg",
+        "data":"22-08-2022",
+        "altura":1.59
+        
+    }
+]

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Lanchonete</title>
+    <link rel="stylesheet" href ="style.css">
+</head>
+<body>
+    <form id="formPedido">
+        <!--Nome do cliente-->
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" required>
+
+        <br><br>
+
+        <!--Escolha do lanche-->
+        <label for="lache">Escolha o Lache: </label>
+        <select id="lanche" required>
+            <option value="">Selecione</option>
+            <option value="15">Hamburguer - R$15,00</option>
+            <option value="18">X-salada - R$18,00</option>
+            <option value="22">X-bacon - R$22,00</option>
+        </select>
+
+        <br><br>
+
+        <label for="quantidade">Quantidade: </label>
+        <input type="number" id="quantidade" min="1" value="1" required>
+
+        <br><br>
+
+        <label for="bebida">Escolha a Bebida: </label>
+        <select id="bebida" required>
+            <option value="0">Nenhuma - R$0,00</option>
+            <option value="6">Refigerante - R$6,00</option>
+            <option value="7">Suco - R$7,00</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Finalizar Pedido</button>
+    </form>
+
+    <hr>
+
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

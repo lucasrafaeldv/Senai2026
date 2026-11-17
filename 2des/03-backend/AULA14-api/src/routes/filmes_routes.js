@@ -1,0 +1,7 @@
+const express = require ("express");
+const routes = express.Router();
+
+const{cadastrar} = require("../controllers/filmes_controller");
+
+routes.post("/cadastrar", cadastrar);
+module.exports = routes;

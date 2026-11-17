@@ -10,24 +10,50 @@ const cadastrar = async ({ nome, cpf, email, senha }) => {
     nome: nome,
     cpf: cpf,
     email: email
-}};0
 
-const listar = (req,res) => {};
+    
+    }};
 
+const listar = async () => {
+    const [result] = await con.query(
+        "SELECT * FROM usuarios;"
+    );
+    return result;
+};
 
-const buscar = (req,res) => {};
+// Buscando Por Id
+const buscar = async (id) => {
+    const [result] = await con.query(
+        "SELECT id, nome, email FROM usuarios WHERE id = ?;",
+        [id]
+    );
+    return result;
+};
 
 
 //DELETE
-const excluir = (req,res) => {};
+const excluir = async (id) => {
+    const [result] = await con.query(
+        "DELETE FROM usuarios WHERE id = ?;",
+        [id]
+    );
+    return result.affectedRows;
+};
 
 
 //PUT
-const atualizar = (req,res) => {};
+const atualizar = async (id,dados) => {
+   const { nome, cpf, email } = dados;
+       const [result] = await con.query(
+        "UPDATE usuarios SET nome = ?, cpf = ?, email = ? WHERE id = ?;",
+        [nome, cpf, email, id]
+    );
+    return result;
+};
 
 
 //PATCH
-const alterar = (req,res) => {};
+const alterar = async () => {};
 
 module.exports ={
     cadastrar,

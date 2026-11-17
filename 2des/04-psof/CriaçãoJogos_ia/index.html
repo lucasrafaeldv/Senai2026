@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arena das Lendas 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="vig"></div>
+
+<div class="ov" id="menu">
+  <div>
+    <h1>ARENA DAS LENDAS</h1>
+    <p class="hint">Escolha seu lutador · <kbd>←</kbd> <kbd>→</kbd> trocar · <kbd>Enter</kbd> começar</p>
+  </div>
+  <div>
+    <div id="cards"></div>
+    <button class="go" id="start">Entrar na arena</button>
+    <p class="hint"><kbd>W A S D</kbd> mover · <kbd>J</kbd> combo de socos (aperte em sequência) · <kbd>K</kbd> chute pesado · <kbd>Shift</kbd> defender (logo antes do golpe = aparar) · <kbd>Espaço</kbd> esquiva</p>
+  </div>
+</div>
+
+<div class="ov" id="over" hidden>
+  <h1 id="ot">DERROTA</h1>
+  <div id="os"></div><br>
+  <button class="go" id="again">Tentar de novo</button>
+</div>
+
+<div id="hud" hidden>
+  <div class="side">
+    <b id="pn"></b> <span id="lv"></span>
+    <div class="bar hp"><i id="php"></i></div>
+    <div class="bar st"><i id="pst"></i></div>
+    <div class="bar xp"><i id="pxp" style="width:0"></i></div>
+  </div>
+  <div class="side r">
+    <b id="en"></b>
+    <div class="bar hp"><i id="ehp"></i></div>
+  </div>
+  <div id="msg"></div>
+  <div id="cmb"></div>
+  <div id="help">J combo · K chute · Shift defesa/aparar · Espaço esquiva</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
