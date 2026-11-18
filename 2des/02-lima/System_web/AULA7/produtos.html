@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Cadastrados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container lista-container">
+        <header class="cabecalho">
+            <div>
+                <h1>Produtos Cadastros</h1>
+                <p class="subtitulo">Consulte e gerencie seus produtos.</p>
+            </div>
+
+            <button class="botao-sair" id="btnSair" type="button">Sair</button>
+        </header>
+
+        <div class="acoes-lista">
+            <button type="button" class="botao-principal" id="btnNovoProduto">+ Novo Produto</button>
+        </div>
+
+        <div class="campo">
+            <label for="pesquisa">Pesquisar produto</label>
+            <input type="search" id="pesquisa" placeholder="Digite o nome ou código">
+        </div>
+
+        <div class="resumo-produto">
+            <span>Total de produtos: </span>
+            <strong id="totalProdutos">0</strong>
+        </div>
+
+        <div class="tabela-wrapper">
+            <table class="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Custo</th>
+                        <th>Venda</th>
+                        <th>Margem</th>
+                        <th>Unidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="listaProdutos"></tbody>
+            </table>
+        </div>
+
+        <p id="mensagemLista" role="status" aria-live="polite"></p>
+    </main>
+
+    <script src="produtos.js"></script>
+</body>
+</html>
