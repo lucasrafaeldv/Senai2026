@@ -1,0 +1,712 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vinho: #6b1230;
+    --vinho-escuro: #4f0c23;
+
+    --dourado: #d4a95a;
+    --dourado-claro: #e8d3a3;
+
+    --creme: #f5f1ea;
+    --branco: #ffffff;
+
+    --texto: #3a2a30;
+    --texto-suave: #7a6a70;
+
+    --borda: #d9cfc6;
+
+    --sombra: 0 10px 30px rgba(107, 18, 48, 0.13);
+}
+
+/* ==============================
+   BODY
+============================== */
+
+body {
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #fffaf0 0%,
+            var(--creme) 55%,
+            #ebe4d8 100%
+        );
+
+    color: var(--texto);
+
+    min-height: 100vh;
+
+    padding: 30px 40px;
+}
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+header {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 25px;
+}
+
+.cabecalho {
+    background: var(--branco);
+
+    min-height: 130px;
+
+    border-radius: 18px;
+
+    border-top: 6px solid var(--vinho);
+
+    box-shadow: var(--sombra);
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 35px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* Detalhe dourado */
+
+.cabecalho::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 2px dotted var(--dourado-claro);
+
+    border-radius: 50%;
+
+    right: -80px;
+    top: -100px;
+
+    opacity: 0.7;
+}
+
+/* ==============================
+   LOGO
+============================== */
+
+.logo {
+    width: 180px;
+    max-width: 30%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    margin-right: 30px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.titulo-loja {
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-loja h1 {
+    color: var(--vinho);
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.titulo-loja p {
+    margin-top: 6px;
+
+    color: var(--texto-suave);
+
+    font-size: 0.95rem;
+
+    font-weight: 500;
+}
+
+/* ==============================
+   PESQUISA
+============================== */
+
+.pesquisa {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto 30px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa input {
+    width: 100%;
+
+    padding: 15px 50px 15px 18px;
+
+    border: 1.5px solid var(--borda);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: var(--texto);
+
+    font-family: inherit;
+
+    font-size: 0.95rem;
+
+    box-shadow: 0 5px 18px rgba(107, 18, 48, 0.07);
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.pesquisa input::placeholder {
+    color: var(--texto-suave);
+}
+
+.pesquisa input:focus {
+    outline: none;
+
+    border-color: var(--dourado);
+
+    box-shadow:
+        0 0 0 4px rgba(212, 169, 90, 0.22),
+        0 5px 18px rgba(107, 18, 48, 0.08);
+}
+
+.pesquisa span {
+    position: absolute;
+
+    right: 18px;
+
+    font-size: 1.2rem;
+
+    pointer-events: none;
+}
+
+/* ==============================
+   MAIN
+============================== */
+
+main {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 330px;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+/* ==============================
+   PRODUTOS
+============================== */
+
+section.produtos {
+    min-width: 0;
+}
+
+.produtos > h2 {
+    color: var(--vinho);
+
+    font-size: 1.35rem;
+
+    margin-bottom: 18px;
+
+    font-weight: 800;
+}
+
+/* ==============================
+   LISTA DE PRODUTOS
+============================== */
+
+.lista-produtos {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+/* ==============================
+   CARD DO PRODUTO
+============================== */
+
+.produto {
+    background: var(--branco);
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(217, 207, 198, 0.9);
+
+    padding: 18px;
+
+    min-height: 370px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow: 0 7px 22px rgba(107, 18, 48, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--dourado);
+
+    box-shadow:
+        0 14px 30px rgba(107, 18, 48, 0.16);
+}
+
+/* ==============================
+   NOME DO PRODUTO
+============================== */
+
+.produto h3 {
+    color: var(--vinho);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    min-height: 24px;
+}
+
+/* ==============================
+   IMAGEM DO PRODUTO
+============================== */
+
+/*
+   Seu HTML usa:
+   <img class="produtos" id="produtos">
+
+   Por isso usamos .produto img para evitar
+   conflito com .produtos da seção.
+*/
+
+.produto img {
+    display: block;
+
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: contain;
+
+    background: #faf8f4;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    margin-bottom: 14px;
+
+    transition: transform 0.25s ease;
+}
+
+.produto:hover img {
+    transform: scale(1.04);
+}
+
+/* ==============================
+   PREÇO
+============================== */
+
+.produto p {
+    color: var(--texto);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.produto p::first-letter {
+    color: var(--vinho);
+}
+
+/* ==============================
+   BOTÃO ADICIONAR
+============================== */
+
+.produto button {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 11px 12px;
+
+    border: 2px solid var(--vinho-escuro);
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--vinho) 0%,
+            var(--vinho-escuro) 100%
+        );
+
+    color: var(--dourado-claro);
+
+    font-family: inherit;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.2s ease,
+        color 0.2s ease;
+}
+
+.produto button:hover {
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 15px rgba(107, 18, 48, 0.30);
+
+    transform: translateY(-1px);
+}
+
+.produto button:active {
+    transform: scale(0.97);
+}
+
+/* ==============================
+   CARRINHO
+============================== */
+
+.carrinho {
+    background: var(--branco);
+
+    border-radius: 16px;
+
+    border-top: 5px solid var(--vinho);
+
+    padding: 24px;
+
+    box-shadow: var(--sombra);
+
+    position: sticky;
+
+    top: 25px;
+
+    min-height: 250px;
+}
+
+/* ==============================
+   TÍTULO DO CARRINHO
+============================== */
+
+.carrinho h2 {
+    color: var(--vinho);
+
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--borda);
+
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   LISTA DO CARRINHO
+============================== */
+
+#listaCarrinho {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-height: 300px;
+
+    overflow-y: auto;
+
+    margin-bottom: 18px;
+}
+
+/* Cada item adicionado pelo JS */
+
+#listaCarrinho li {
+    background: #faf8f4;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    font-size: 0.82rem;
+
+    color: var(--texto);
+
+    line-height: 1.4;
+}
+
+/* ==============================
+   TOTAL
+============================== */
+
+#total {
+    color: var(--vinho);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    padding: 15px 0;
+
+    border-top: 1px solid var(--borda);
+
+    border-bottom: 1px solid var(--borda);
+
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   BOTÕES DO CARRINHO
+============================== */
+
+.carrinho button {
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Finalizar */
+
+.carrinho button:first-of-type {
+    border: 2px solid var(--vinho-escuro);
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--vinho) 0%,
+            var(--vinho-escuro) 100%
+        );
+
+    color: var(--dourado-claro);
+
+    margin-bottom: 10px;
+}
+
+.carrinho button:first-of-type:hover {
+    color: white;
+
+    box-shadow:
+        0 6px 16px rgba(107, 18, 48, 0.30);
+
+    transform: translateY(-1px);
+}
+
+/* Limpar */
+
+.carrinho button:last-of-type {
+    background: transparent;
+
+    border: 1.5px solid var(--borda);
+
+    color: var(--texto-suave);
+}
+
+.carrinho button:last-of-type:hover {
+    border-color: var(--vinho);
+
+    color: var(--vinho);
+
+    background: #fffaf7;
+}
+
+/* ==============================
+   SCROLL DO CARRINHO
+============================== */
+
+#listaCarrinho::-webkit-scrollbar {
+    width: 6px;
+}
+
+#listaCarrinho::-webkit-scrollbar-track {
+    background: #f5f1ea;
+}
+
+#listaCarrinho::-webkit-scrollbar-thumb {
+    background: var(--dourado);
+
+    border-radius: 10px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+/* Notebook / telas médias */
+
+@media (max-width: 1100px) {
+
+    main {
+        grid-template-columns: minmax(0, 1fr) 290px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+
+    body {
+        padding: 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .carrinho {
+        position: static;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celular */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .cabecalho {
+        min-height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .logo {
+        width: 150px;
+
+        max-width: 80%;
+
+        margin: 0 auto 15px;
+    }
+
+    .titulo-loja h1 {
+        font-size: 1.5rem;
+    }
+
+    .titulo-loja p {
+        font-size: 0.85rem;
+    }
+
+    .pesquisa {
+        margin-bottom: 20px;
+    }
+
+    .lista-produtos {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .produto {
+        min-height: auto;
+    }
+
+    .produto img {
+        height: 220px;
+    }
+
+    .carrinho {
+        padding: 20px;
+    }
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 380px) {
+
+    .produto img {
+        height: 190px;
+    }
+
+    .titulo-loja h1 {
+        font-size: 1.3rem;
+    }
+}

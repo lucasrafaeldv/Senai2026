@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lojinha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <img class="logo" src="../assets/logo.png" alt="Logo VendaFácil">
+            <div class="titulo-loja">
+                <h1>Área de Vendas</h1>
+                <p>Selecione os produtos!</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="pesquisa">
+        <input type="text" id="pesquisa" placeholder="Pesquisar produtos..." oninput="pesquisarProdutos()">
+        <span>🔍</span>
+    </div>
+
+    <main>
+
+        <section class="produtos">
+            <h2>Produtos disponíveis</h2>
+
+            <div class="lista-produtos">
+
+                <div class="produto">
+                    <h3>Calça Balão</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/calca-balao.png">
+                    <p>Preço: R$ 89,00</p>
+                    <button onclick="adicionarCarrinho('Calça', 89.00)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Tênis Puma</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/tenis-puma.png">
+                    <p>Preço: R$ 219,90</p>
+                    <button onclick="adicionarCarrinho('Tênis Casual', 219.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Calça Jeans Levis</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/calca-calvin.png">
+                    <p>Preço: R$ 249,90</p>
+                    <button onclick="adicionarCarrinho('Calça Jeans Levi', 249.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Camiseta Nike</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/camisa-nike.png">
+                    <p>Preço: R$ 119,90</p>
+                    <button onclick="adicionarCarrinho('Camiseta Nike', 119.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Moletom Adidas</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/moletom-adidas.png">
+                    <p>Preço: R$ 189,90</p>
+                    <button onclick="adicionarCarrinho('Blusa Adidas', 189.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Boné New Era</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/bone-newera.png">
+                    <p>Preço: R$ 139,90</p>
+                    <button onclick="adicionarCarrinho('Boné New Era', 139.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Shorts Nike</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/short-nike.png">
+                    <p>Preço: R$ 99,90</p>
+                    <button onclick="adicionarCarrinho('Shorts Nike', 99.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Calça Cargo Puma</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/calca-balao.png">
+                    <p>Preço: R$ 219,90</p>
+                    <button onclick="adicionarCarrinho('Calça Cargo Puma', 219.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Camiseta Lacoste</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/blusa-lacoste.png">
+                    <p>Preço: R$ 199,90</p>
+                    <button onclick="adicionarCarrinho('Camiseta Lacoste', 199.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Moletom Adidas</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/moletom-adidas.png">
+                    <p>Preço: R$ 229,90</p>
+                    <button onclick="adicionarCarrinho('Moletom Adidas', 229.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Shorts Jeans</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/short-jeans.png">
+                    <p>Preço: R$ 89,90</p>
+                    <button onclick="adicionarCarrinho('Shorts Jeans', 89.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Boné Nike</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/bone-nike.png">
+                    <p>Preço: R$ 119,90</p>
+                    <button onclick="adicionarCarrinho('Boné Nike', 119.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Tênis Adidas</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/tenis-adidas.png">
+                    <p>Preço: R$ 349,90</p>
+                    <button onclick="adicionarCarrinho('Tênis Adidas', 349.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+                <div class="produto">
+                    <h3>Camiseta Puma</h3>
+                    <img class="produtos" id="produtos" src="../assets/produtos/calca-balao.png">
+                    <p>Preço: R$ 109,90</p>
+                    <button onclick="adicionarCarrinho('Camiseta Puma', 109.90)">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="carrinho">
+
+            <h2>🛒 Meu Carrinho</h2>
+
+            <ul id="listaCarrinho"></ul>
+
+            <h3 id="total">Total: R$ 0,00</h3>
+
+            <button onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+
+            <button onclick="limparCarrinho()">
+                Limpar Carrinho
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

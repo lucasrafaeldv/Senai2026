@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vinho: #6b1230;
+    --vinho-escuro: #4f0c23;
+    --dourado: #d4a95a;
+    --dourado-claro: #e8d3a3;
+    --creme: #f5f1ea;
+    --texto: #3a2a30;
+    --texto-suave: #7a6a70;
+    --borda: #d9cfc6;
+}
+
+body {
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%, #fffaf0 0%, var(--creme) 60%, #ebe4d8 100%);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* Título da página */
+header {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--vinho);
+    letter-spacing: 0.5px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card do formulário */
+#cadastroForm {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    max-width: 440px;
+    margin-top: 16px;
+    padding: 36px 30px 30px;
+    border-radius: 18px;
+    border-top: 6px solid var(--vinho);
+    box-shadow: 0 14px 34px rgba(107, 18, 48, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Detalhe pontilhado inspirado na borda da logo */
+#cadastroForm::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 2px dotted var(--dourado-claro);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+/* Tudo dentro do card fica acima do pontilhado */
+#cadastroForm > * {
+    position: relative;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--vinho);
+    margin-top: 12px;
+}
+
+#cadastroForm > label:first-of-type {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--borda);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--texto);
+    background: #fffdfa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: var(--texto-suave);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 4px rgba(212, 169, 90, 0.28);
+}
+
+/* Botão Cadastrar */
+button[type="submit"] {
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: 2px solid var(--vinho-escuro);
+    border-radius: 10px;
+    background: linear-gradient(180deg, var(--vinho) 0%, var(--vinho-escuro) 100%);
+    color: var(--dourado-claro);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(107, 18, 48, 0.35);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+button[type="submit"]:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 2px;
+}
+
+/* Links (caso adicione "Já tem conta? Entrar") */
+a {
+    color: var(--vinho);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--dourado);
+    text-decoration: underline;
+}
+
+/* Mensagem de erro (para usar no JS depois) */
+#mensagemErro {
+    color: var(--vinho);
+    font-size: 14px;
+    margin: 8px 0;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    #cadastroForm {
+        padding: 30px 20px 24px;
+    }
+}
