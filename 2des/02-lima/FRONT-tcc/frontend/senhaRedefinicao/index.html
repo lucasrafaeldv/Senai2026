@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha - VendaFácil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Redefinir Senha</h2>
+
+    <div class="container">
+        <form id="formNovaSenha">
+            <label for="novaSenha">Nova Senha:</label>
+            <div class="campo-senha">
+                <input type="password" id="novaSenha" name="novaSenha" placeholder="Digite sua nova senha" minlength="6" required>
+                <button type="button" class="btn-olho" data-target="novaSenha" aria-label="Mostrar senha">👁️</button>
+            </div>
+
+            <label for="confirmarSenha">Confirmar Senha:</label>
+            <div class="campo-senha">
+                <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme a nova senha" minlength="6" required>
+                <button type="button" class="btn-olho" data-target="confirmarSenha" aria-label="Mostrar senha">👁️</button>
+            </div>
+
+            <p id="mensagemErro"></p>
+
+            <button type="submit" id="botaoRedefinir">Redefinir</button>
+        </form>
+
+        <a href="../LoginUsuario/usuarioLogin.html">Voltar para o login</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 VendaFácil. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

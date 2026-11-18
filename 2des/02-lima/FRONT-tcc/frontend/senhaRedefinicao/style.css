@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --vinho: #6b1230;
+    --vinho-escuro: #4f0c23;
+    --dourado: #d4a95a;
+    --dourado-claro: #e8d3a3;
+    --creme: #f5f1ea;
+    --texto: #3a2a30;
+    --texto-suave: #7a6a70;
+    --borda: #d9cfc6;
+}
+
+/* Garante que os formulários com o atributo "hidden" realmente sumam */
+[hidden] {
+    display: none !important;
+}
+
+body {
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%, #fffaf0 0%, var(--creme) 60%, #ebe4d8 100%);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+/* Cartão principal */
+.container {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    max-width: 410px;
+    margin-top: 24px;
+    padding: 36px 30px 30px;
+    border-radius: 18px;
+    border-top: 6px solid var(--vinho);
+    box-shadow: 0 14px 34px rgba(107, 18, 48, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Detalhe pontilhado inspirado na borda da logo */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 2px dotted var(--dourado-claro);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.container > * {
+    position: relative;
+}
+
+/* Logo: use <img class="logo" src="/assets/logo.png" alt="Logo VendaFácil"> */
+.logo {
+    display: block;
+    width: 350px;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--vinho);
+    text-align: center;
+}
+
+#mensagem {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--texto-suave);
+    text-align: center;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Os <br> dentro dos formulários atrapalham o espaçamento (o gap já resolve) */
+form br {
+    display: none;
+}
+
+/* Rótulos dos campos (usados no formulário de nova senha) */
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--vinho);
+    margin-bottom: -6px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid var(--borda);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--texto);
+    background: #fffdfa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: var(--texto-suave);
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 4px rgba(212, 169, 90, 0.28);
+}
+
+/* Campo do código de 6 dígitos */
+#codigo {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 8px;
+}
+
+#codigo::placeholder {
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+/* Botões */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--vinho-escuro);
+    border-radius: 10px;
+    background: linear-gradient(180deg, var(--vinho) 0%, var(--vinho-escuro) 100%);
+    color: var(--dourado-claro);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(107, 18, 48, 0.35);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+button[type="submit"]:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 2px;
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Link "Voltar para o login" */
+a {
+    color: var(--vinho);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+a:hover {
+    color: var(--dourado);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Mensagens de erro e sucesso (podem ser usadas pelo JavaScript) */
+#mensagemErro,
+.erro {
+    color: var(--vinho);
+    font-size: 14px;
+    margin: 8px 0;
+    align-self: center;
+    text-align: center;
+}
+
+.sucesso {
+    color: #2f6b3a;
+    font-size: 14px;
+    margin: 8px 0;
+    align-self: center;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px 24px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+.campo-senha {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.campo-senha input {
+    padding-right: 42px;
+}
+
+.btn-olho {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--texto-suave);
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.btn-olho:hover {
+    color: var(--vinho);
+}
