@@ -1,0 +1,172 @@
+/* Remove espacamentos padrao e facilita o calculo das dimensoes. */
+* {
+    box-sizing: border-box;
+}
+
+/* Define a fonte e o fundo geral da pagina. */
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f4f8;
+    color: #202938;
+}
+
+/* Limita a largura do conteudo e centraliza a pagina. */
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Centraliza o titulo e o texto de apresentacao. */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Estiliza os paineis do formulario e da tabela. */
+.card {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+/* Organiza os campos do formulario em coluna. */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+/* Padroniza os campos de texto e numericos. */
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd2dc;
+    border-radius: 6px;
+    font: inherit;
+    margin-bottom: 8px;
+}
+
+/* Destaca o campo que esta recebendo digitacao. */
+input:focus,
+textarea:focus {
+    outline: 2px solid #9ac5ff;
+    border-color: #2878d0;
+}
+
+/* Organiza os botoes do formulario. */
+.botoes,
+.titulo-lista {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Separa o titulo da lista e o botao de atualizar. */
+.titulo-lista {
+    justify-content: space-between;
+}
+
+/* Estilo padrao dos botoes. */
+button {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background: #1769aa;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Muda a cor do botao quando o mouse passa sobre ele. */
+button:hover {
+    filter: brightness(0.9);
+}
+
+/* Estilo dos botoes secundarios. */
+button.secundario {
+    background: #667085;
+}
+
+/* Estilo dos botoes de exclusao. */
+button.excluir {
+    background: #c93636;
+}
+
+/* Faz a tabela ocupar toda a largura disponivel. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* Adiciona linhas e espacamento nas celulas. */
+th,
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e2e6ec;
+    text-align: left;
+}
+
+/* Destaca o cabecalho da tabela. */
+th {
+    background: #edf2f7;
+}
+
+/* Mantem os botoes de acao lado a lado. */
+.acoes {
+    display: flex;
+    gap: 6px;
+}
+
+/* Reserva altura para mensagens sem movimentar muito a pagina. */
+#mensagem {
+    min-height: 20px;
+    font-weight: bold;
+}
+
+/* Cor utilizada para mensagens de erro. */
+.erro {
+    color: #c93636;
+}
+
+/* Cor utilizada para mensagens de sucesso. */
+.sucesso {
+    color: #168044;
+}
+
+/* Permite rolagem horizontal em telas pequenas. */
+.tabela-responsiva {
+    overflow-x: auto;
+}
+
+/* Ajusta o layout para celulares. */
+@media (max-width: 650px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .titulo-lista {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    th,
+    td {
+        padding: 9px 7px;
+        font-size: 14px;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+}

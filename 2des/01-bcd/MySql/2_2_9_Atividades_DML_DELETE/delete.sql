@@ -12,7 +12,7 @@ WHERE marca = "LG";
 
 --- Atividade 4 ---
 DELETE FROM produto
-WHERE id_produto IN = (3,5,10);
+WHERE id_produtko IN = (3,5,10);
 
 --- Atividade 5 ---
 DELETE FROM venda
